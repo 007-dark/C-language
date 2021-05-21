@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int m,n,b,y;
+	int yinshu(int x,int y);
+	printf("输入两个数求公因数和公倍数\n输入两个数：");
+	scanf("%d%d",&m,&n);
+	y=yinshu(m,n);
+	b=m*n/y;
+	printf("最大公因数：%d\n最小公倍数：%d\n",y,b);
+}
+int yinshu(int x,int y)
+{
+	int t;
+	while(t=x%y)
+	{
+		x=y;
+		y=t;
+	}
+	return y;
+}
