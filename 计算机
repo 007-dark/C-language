@@ -1,0 +1,57 @@
+#include<stdio.h>
+
+int main()
+{
+	void jisuanqi();
+	char e,z[100]={"quit"};
+	printf("****************************************\n****************************************\n");
+	printf("计算机，输入a()b,输出a（）b=c\n");
+	for(;;)
+	{
+		jisuanqi();
+		printf("\n是否继续,继续请输入 jixu ，结束输入 quit \n输入是否继续："); 
+		scanf("%s",&e);
+		if(e==z[0])
+		{
+			break;
+		}
+		printf("****************************************\n");
+	}
+}
+
+void jisuanqi()
+{
+	char b;
+	int  a;
+	float c;
+	printf("请输入式子："); 
+	scanf("%d%c%f",&a,&b,&c);
+	switch(b)
+	{
+		case '+':
+			{
+				printf("结果：%d%c%f=%f\n",a,b,c,a+c);
+				break;
+			}
+		case '-':
+			{
+				printf("结果：%d%c%f=%f\n",a,b,c,a-c);
+				break;
+			}
+		case '*':
+			{
+				printf("结果：%d%c%f=%f\n",a,b,c,a*c);
+				break;
+			}
+		case '/':
+			{
+				printf("结果：%d%c%f=%f\n",a,b,c,a/c);
+				break;
+			}
+		default:
+			{
+				printf("结果：输入出错\n");
+				break;
+			}
+	}
+}
