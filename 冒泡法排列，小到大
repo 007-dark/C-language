@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int maopao(int a[],int shu)
+{
+	int i,t,n;
+	for(n=0;n<shu;n++)
+	{
+		for(i=0;i<shu-n;i++)
+		{
+			if(a[i]>a[i+1])
+			{
+				t=a[i];
+				a[i]=a[i+1];
+				a[i+1]=t;
+
+			}
+		}
+	}
+}
+
+int main()
+{
+	int i,shu=10,a[520];  //定义输入个数  ：shu 
+	printf("输入十个数，冒泡法比较输出\n请输入：");
+	for(i=0;i<shu;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("结果：");
+	maopao(a,shu);
+	for(i=0;i<shu;i++)
+	{
+		printf("%4d",a[i]);
+	}
+
+}
