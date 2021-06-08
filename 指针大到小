@@ -1,0 +1,44 @@
+#include<stdio.h>
+//dec++6.0       换指针指向的地址，三个数的大到小
+/*--------------排序------------------*/
+void jiaohuan(int *n1,int *n2)
+{
+	int *t;
+	t=n1;
+	n1=n2;
+	n2=t;
+}
+/*---------------比大小-------------------*/
+void dadaoxiao(int *p1,int *p2,int *p3)
+{
+	if(*p1<*p2)
+	{
+		jiaohuan(p1,p2);
+	}
+	if(*p1<*p3)
+	{
+		jiaohuan(p1,p3);
+	}
+	if(*p2<*p3)
+	{
+		jiaohuan(p2,p3);
+	}
+}
+/*-------------输出-----------------*/
+void printf(int *N1,int *N2,int *N3)
+{
+	printf("%d>%d>%d",*N1,*N2,*N3);	
+}
+/*------------主函数------------*/
+ main()
+{
+	int *s1,*s2,*s3,a,b,c;
+	printf("输入三个数比大小，从大到小!\n请输入：");
+	scanf("%d%d%d",&a,&b,&c);
+	s1=&a;
+	s2=&b;
+	s3=&c;
+	dadaoxiao(s1,s2,s3);
+	printf("结果：");
+	printf(s1,s2,s3);
+}
