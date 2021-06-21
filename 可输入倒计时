@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+
+#if(1)
+int main()
+{
+	int f_1=1,f_2=2,m_1=4,m_2=5,i=1;
+	printf("请规定倒计数的时间：");
+	scanf("%d%d:%d%d",&f_1,&f_2,&m_1,&m_2);
+	for(;f_1>=0;f_1--)
+	{
+		for(;f_2>=0;f_2--)
+		{
+			for(;m_1>=0;m_1--)
+			{
+				for(;m_2>=0;m_2--)
+				{
+					for(;i;i-=1)
+					{
+						system("cls");
+						printf("开始！");
+					}
+					Sleep(1000);
+					system("cls");
+					printf("%d %d : %d %d \n",f_1,f_2,m_1,m_2);
+					
+				}
+				m_2=9;
+			}
+			m_1=5;
+		}
+		f_2=9;
+	}
+} 
+#endif
